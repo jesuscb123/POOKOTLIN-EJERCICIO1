@@ -1,6 +1,6 @@
 
 
-class rectangulo(private var base: Float, private var altura: Float) {
+class rectangulo(val base: Float, val altura: Float) {
     constructor() : this(base = 40F, altura = 60F)
     constructor(base: Float) : this(base, altura = 40F)
 
