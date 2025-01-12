@@ -7,6 +7,12 @@
  */
 
 
+fun mostrar_rectangulos(lista_rectangulos: MutableList<rectangulo>){
+    for(rectangulo in lista_rectangulos){
+        println("${rectangulo} ${rectangulo.calcular_area()} ${rectangulo.calcular_perimetro()}")
+    }
+}
+
 fun validar_positivo(base: Float, altura: Float): Boolean{
     if(base < 0 || altura < 0){
         return false
@@ -16,5 +22,9 @@ fun validar_positivo(base: Float, altura: Float): Boolean{
 
 
 fun main(){
-    
+   var lista_rectangulos = mutableListOf<rectangulo>()
+    lista_rectangulos.add(rectangulo(40F,50F))
+    lista_rectangulos.add(rectangulo())
+    lista_rectangulos.add(rectangulo(base = 20F))
+    mostrar_rectangulos(lista_rectangulos)
 }

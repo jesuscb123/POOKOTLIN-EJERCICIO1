@@ -10,11 +10,17 @@ class rectangulo(private var base: Float, private var altura: Float) {
         }
     }
 
-    fun calcular_area(): Float{
-        return base * altura
+    fun calcular_area(): String{
+        val area = base * altura
+        return "El área de este rectángulo es: $area"
     }
 
-    fun calcular_perimetor(): Float{
-        return 2 * (base * altura)
+    fun calcular_perimetro(): String{
+        val perimetro  = 2 * (base * altura)
+        return "El perímetro de este rectángulo es: $perimetro"
     }
+    override fun toString(): String {
+        return "Rectangulo: base: ${this.base} altura: ${this.altura} "
+    }
+
 }
